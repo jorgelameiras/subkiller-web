@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SubKiller — Support</title>
+    <meta name="description" content="Contact and FAQ for SubKiller — the private subscription canceler for iOS." />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .support-page {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 64px 24px 96px;
+      }
+      .support-page h1 { font-size: 40px; letter-spacing: -0.02em; margin: 0 0 12px; }
+      .support-page .lede { font-size: 17px; color: var(--text-3, #525252); margin: 0 0 40px; }
+      .support-page h2 { font-size: 22px; margin: 40px 0 12px; }
+      .support-page p { line-height: 1.55; margin: 0 0 14px; }
+      .support-page a { color: #0F6A3E; }
+      .support-page .contact-card {
+        background: #F4F4F7;
+        border-radius: 16px;
+        padding: 20px 22px;
+        margin: 16px 0 0;
+      }
+      .support-page footer { color: #7A7A80; margin-top: 64px; font-size: 13px; }
+      @media (prefers-color-scheme: dark) {
+        body { background: #000; color: #fff; }
+        .support-page .contact-card { background: #17171A; }
+        .support-page a { color: #30D158; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="support-page">
+      <p><a href="./index.html">← SubKiller</a></p>
+      <h1>Support</h1>
+      <p class="lede">
+        SubKiller is a private, local-only iOS app. Have a question, found a service we don't support, or hitting a bug?
+        Email is the fastest way to reach us.
+      </p>
+
+      <div class="contact-card">
+        <p style="margin:0;">
+          <strong>Email:</strong>
+          <a href="mailto:jorgelameiras207@gmail.com?subject=SubKiller%20support">jorgelameiras207@gmail.com</a>
+        </p>
+        <p style="margin:8px 0 0;">
+          We try to reply within 48 hours. Include your iOS version and what you were doing when the issue happened — it speeds things up a lot.
+        </p>
+      </div>
+
+      <h2>Common questions</h2>
+
+      <h3>My subscription service isn't in the cancel-link library.</h3>
+      <p>
+        Email us the service name and we'll add it. The library ships v1 with 100 services and grows from user reports.
+        In the meantime, every subscription you add will still surface in your renewal reminders and lifetime-paid totals.
+      </p>
+
+      <h3>Does SubKiller see my bank account?</h3>
+      <p>
+        No. There is no Plaid login, no transaction reading, no bank API. We don't ask for your bank credentials and
+        we don't have a backend that could store them. Your subscription list lives on your phone.
+      </p>
+
+      <h3>I bought Pro but it didn't unlock.</h3>
+      <p>
+        Open <strong>Settings → Restore purchase</strong> in SubKiller. If that doesn't restore it, email us with the date of purchase and the Apple ID you used.
+        We can verify with RevenueCat and fix it from our side.
+      </p>
+
+      <h3>Does it auto-cancel for me?</h3>
+      <p>
+        No, intentionally. Auto-cancel would require storing your login credentials for every service — exactly the kind of
+        attack surface SubKiller exists to avoid. Instead, SubKiller opens the exact cancel URL in Safari, tells you the
+        retention sequence the vendor will use, and verifies 24 hours later that it actually worked.
+      </p>
+
+      <h3>What about Android?</h3>
+      <p>
+        Not in v1. We're focused on shipping a great iOS app first. If demand is there, Android is on the roadmap.
+      </p>
+
+      <h2>Privacy</h2>
+      <p>
+        Anonymous analytics are off by default. There is no account, no cloud sync, no email scan, no bank login.
+        See <a href="./privacy.html">our privacy pledge</a> for the technical details — what data does and does not leave your phone.
+      </p>
+
+      <footer>
+        SubKiller · Made in Florida · © 2026 Jorge Lameiras
+      </footer>
+    </main>
+  </body>
+</html>

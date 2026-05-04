@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SubKiller - Cancel forgotten subscriptions</title>
+    <meta
+      name="description"
+      content="SubKiller is a private, one-time purchase app that helps you cancel forgotten subscriptions without bank login, cloud sync, or email scanning."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <nav class="site-nav">
+        <a class="brand" href="#top" aria-label="SubKiller home">
+          <span class="brand-mark">$</span>
+          <span>SubKiller</span>
+        </a>
+        <!-- TODO: Replace this CSS badge with Apple's official App Store badge asset before public launch. -->
+        <a class="store-badge" href="#download" aria-label="Download on the App Store">
+          <span>Download on the</span>
+          <strong>App Store</strong>
+        </a>
+      </nav>
+
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Not a subscription. Never will be.</p>
+          <h1>Stop paying to <s>track</s>. <span>We cancel them.</span></h1>
+          <p class="lede">Tracking is a checkbox. Cancelling is a fight. SubKiller is built for the fight.</p>
+          <div class="hero-actions">
+            <a class="primary-cta" href="#download">Get SubKiller</a>
+            <a class="secondary-cta" href="#compare">Compare privacy</a>
+          </div>
+          <div class="pledge-strip">No bank login. No cloud. No backend that could leak.</div>
+        </div>
+
+        <div class="phone-frame" aria-label="SubKiller cancellation coach screen preview">
+          <div class="dynamic-island"></div>
+          <div class="phone-screen">
+            <div class="phone-status">
+              <span>9:41</span>
+              <span>5G 100%</span>
+            </div>
+            <div class="phone-body">
+              <div class="phone-nav">
+                <span>Cancel</span>
+                <strong>Netflix</strong>
+                <span></span>
+              </div>
+              <section class="waste-card compact">
+                <span>Lifetime paid</span>
+                <strong>$1,839</strong>
+              </section>
+              <section class="retention-sheet">
+                <div class="sheet-handle"></div>
+                <div class="warning-dot">!</div>
+                <h3>Before you cancel</h3>
+                <p class="destination">Netflix.com/account</p>
+                <ol>
+                  <li>Choose <b>Cancel membership</b>.</li>
+                  <li>Expect a <b>30% off for 3 months</b> offer.</li>
+                  <li>Scroll past it. The offer is the trap.</li>
+                </ol>
+                <button>Take me there</button>
+                <span class="not-now">Not now</span>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-band" aria-label="Core features">
+        <article>
+          <span>01</span>
+          <h2>Retention cheat sheet</h2>
+          <p>Know the discount, dark pattern, and exact wording before the cancel page opens.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h2>Lifetime waste</h2>
+          <p>See the total damage. "$1,839 since 2019" changes the decision faster than "$22.99/mo".</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h2>Zombie subs</h2>
+          <p>Sort by services you have not used lately, then cancel the obvious leaks first.</p>
+        </article>
+      </section>
+
+      <section class="comparison" id="compare">
+        <div class="section-heading">
+          <p class="eyebrow">Versus subscription trackers</p>
+          <h2>The competition charges you a subscription to cancel subscriptions.</h2>
+        </div>
+        <!-- TODO VERIFY: Rocket Money / Bobby pricing as of 2026-04 before public launch. -->
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th class="highlight">SubKiller</th>
+                <th>Rocket Money</th>
+                <th>Bobby</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Pricing</th>
+                <td class="highlight">$4.99 once</td>
+                <td>$6-12 / month</td>
+                <td>$2 / month</td>
+              </tr>
+              <tr>
+                <th scope="row">Asks for your bank login</th>
+                <td class="highlight"><span class="mark good"><span aria-hidden="true">✓</span>No</span></td>
+                <td><span class="mark bad"><span aria-hidden="true">✗</span>Yes</span></td>
+                <td><span class="mark bad"><span aria-hidden="true">✗</span>Yes</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Reads your transactions</th>
+                <td class="highlight"><span class="mark good"><span aria-hidden="true">✓</span>No</span></td>
+                <td><span class="mark bad"><span aria-hidden="true">✗</span>Yes</span></td>
+                <td><span class="mark bad"><span aria-hidden="true">✗</span>Yes</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Cancels for you</th>
+                <td class="highlight"><span class="mark good"><span aria-hidden="true">✓</span>Yes</span></td>
+                <td><span class="mark bad"><span aria-hidden="true">✗</span>No</span></td>
+                <td><span class="mark bad"><span aria-hidden="true">✗</span>No</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Retention-offer warnings</th>
+                <td class="highlight"><span class="mark good"><span aria-hidden="true">✓</span>Yes</span></td>
+                <td><span class="mark bad"><span aria-hidden="true">✗</span>No</span></td>
+                <td><span class="mark bad"><span aria-hidden="true">✗</span>No</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Cloud sync of your subs</th>
+                <td class="highlight"><span class="mark good"><span aria-hidden="true">✓</span>No</span></td>
+                <td><span class="mark bad"><span aria-hidden="true">✗</span>Yes</span></td>
+                <td><span class="mark bad"><span aria-hidden="true">✗</span>Yes</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Backend that could leak</th>
+                <td class="highlight"><span class="mark good"><span aria-hidden="true">✓</span>No</span></td>
+                <td><span class="mark bad"><span aria-hidden="true">✗</span>Yes</span></td>
+                <td><span class="mark bad"><span aria-hidden="true">✗</span>Yes</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="money-hook">
+        <div>
+          <p class="eyebrow">The number that ends the debate</p>
+          <strong>$1,839</strong>
+          <p>One forgotten entertainment subscription, six years later.</p>
+        </div>
+
+        <div class="phone-frame" aria-label="SubKiller lifetime waste screen preview">
+          <div class="dynamic-island"></div>
+          <div class="phone-screen">
+            <div class="phone-status">
+              <span>9:41</span>
+              <span>5G 100%</span>
+            </div>
+            <div class="phone-body phone-body-detail">
+              <div class="phone-nav">
+                <span>SubKiller</span>
+                <strong>Netflix</strong>
+                <span>Edit</span>
+              </div>
+              <section class="waste-card">
+                <span>Lifetime paid</span>
+                <strong>$1,839</strong>
+                <p>since Jan 12, 2019 · 80 bills</p>
+              </section>
+              <div class="mini-grid">
+                <div>
+                  <span>Next bill</span>
+                  <strong>May 12</strong>
+                </div>
+                <div>
+                  <span>Monthly</span>
+                  <strong>$22.99</strong>
+                </div>
+              </div>
+              <button class="phone-danger">Cancel Netflix</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="privacy">
+        <div class="section-heading">
+          <p class="eyebrow">Private by incapability</p>
+          <h2>We could not see your data if a court ordered us to.</h2>
+        </div>
+        <div class="privacy-grid">
+          <article>
+            <h3>No backend</h3>
+            <p>Your subscription list stays on your phone. There is no account database to breach.</p>
+          </article>
+          <article>
+            <h3>No bank login</h3>
+            <p>SubKiller never asks for credentials to your financial life.</p>
+          </article>
+          <article>
+            <h3>No email scan</h3>
+            <p>Add subscriptions manually or through the share extension without handing over your inbox.</p>
+          </article>
+        </div>
+        <aside class="privacy-callout">Analytics are off by default. Opt in only if you want to help improve the app.</aside>
+      </section>
+
+      <section class="faq" aria-label="Frequently asked questions">
+        <details open>
+          <summary>Why not auto-cancel everything?</summary>
+          <p>Auto-cancel requires storing your login credentials for every service - exactly the kind of attack surface this app exists to avoid.</p>
+        </details>
+        <details>
+          <summary>Does SubKiller find subscriptions automatically?</summary>
+          <p>No bank scraping. No email scraping. You add what matters, and SubKiller helps you cancel it cleanly.</p>
+        </details>
+        <details>
+          <summary>Is this another monthly subscription?</summary>
+          <p>No. SubKiller is a one-time purchase because charging forever to reduce subscriptions is the wrong incentive.</p>
+        </details>
+        <details>
+          <summary>What happens after I tap cancel?</summary>
+          <p>SubKiller opens the right cancellation page, warns you about retention offers, then checks back so you can verify the cancellation worked.</p>
+        </details>
+        <details>
+          <summary>When is it available?</summary>
+          <p>TestFlight is the first target. The public App Store page will use the official badge before launch.</p>
+        </details>
+      </section>
+
+      <section class="closing" id="download">
+        <h2>Stop paying $9 a month to know you're paying $84 a month.</h2>
+        <a class="store-badge large" href="#" aria-label="Download on the App Store">
+          <span>Download on the</span>
+          <strong>App Store</strong>
+        </a>
+      </section>
+    </main>
+  </body>
+</html>
