@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SubKiller — Privacy Policy</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .privacy-page { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+      .privacy-page h1 { font-size: 40px; letter-spacing: -0.02em; margin: 0 0 12px; }
+      .privacy-page .lede { font-size: 17px; color: #525252; margin: 0 0 32px; }
+      .privacy-page h2 { font-size: 22px; margin: 36px 0 12px; }
+      .privacy-page p, .privacy-page li { line-height: 1.6; }
+      .privacy-page ul { padding-left: 22px; }
+      .privacy-page a { color: #0F6A3E; }
+      .privacy-page footer { color: #7A7A80; margin-top: 64px; font-size: 13px; }
+      .privacy-page .stamp { color: #7A7A80; font-size: 13px; margin-bottom: 24px; }
+      @media (prefers-color-scheme: dark) {
+        body { background: #000; color: #fff; }
+        .privacy-page .lede, .privacy-page .stamp, .privacy-page footer { color: #8C8C93; }
+        .privacy-page a { color: #30D158; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="privacy-page">
+      <p><a href="./index.html">← SubKiller</a></p>
+      <h1>Privacy Policy</h1>
+      <p class="stamp">Last updated: 2026-04-30</p>
+
+      <p class="lede">
+        SubKiller is a private, local-only iOS app. The plain-language version of this
+        policy is the <a href="./index.html#privacy">Private by incapability</a>
+        section on the home page; this is the formal version for the App Store.
+      </p>
+
+      <h2>What we collect by default</h2>
+      <p><strong>Nothing.</strong> SubKiller has no backend. Your subscription list, billing dates, prices, and notes
+      live in a SQLite file inside the app's sandbox on your iPhone. There is no server we run, no API to call,
+      no database we host, and no logs we keep.</p>
+
+      <h2>What you can choose to share</h2>
+      <p>
+        <strong>Anonymous usage events (off by default).</strong> If you turn on
+        <em>Settings → Help improve SubKiller</em>, the app sends product-event names
+        (e.g. "subscription added", "paywall viewed") to PostHog so we can learn which
+        flows are working. We do not send subscription names, prices, your email, your
+        Apple ID, or any device identifier we control. PostHog's distinct-id is
+        randomly generated on your device. The toggle ships <strong>off</strong>; we
+        only collect anything if you explicitly turn it on, and you can turn it off at
+        any time from the same screen.
+      </p>
+
+      <h2>Purchases</h2>
+      <p>
+        When you buy SubKiller Pro, the in-app purchase receipt flows through Apple
+        and is validated by RevenueCat (our IAP infrastructure provider). RevenueCat
+        receives the data Apple sends with the purchase — your Apple ID, the receipt
+        ID, the product ID, and the purchase date. This is required to honor your Pro
+        unlock. RevenueCat's privacy practices are documented at
+        <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.
+      </p>
+
+      <h2>What we never do</h2>
+      <ul>
+        <li>We do not ask for your bank login. We have no Plaid integration. We do not read your transactions.</li>
+        <li>We do not scan your email. There is no Gmail or iCloud OAuth permission.</li>
+        <li>We do not require an account. There is no sign-up, no password, no profile.</li>
+        <li>We do not sync to the cloud. Your subscription list never leaves your phone unless you export it yourself.</li>
+        <li>We do not share data with third parties for advertising. There are no ads in SubKiller.</li>
+      </ul>
+
+      <h2>Children's privacy</h2>
+      <p>
+        SubKiller is not directed at children under 13. We do not knowingly collect personal information
+        from children. If you believe a child under 13 has provided us with personal information
+        through SubKiller, please <a href="mailto:jorgelameiras207@gmail.com">contact us</a> and we'll
+        delete it.
+      </p>
+
+      <h2>Your rights</h2>
+      <p>
+        Because SubKiller stores your data locally on your phone, you control it directly. You can
+        delete every subscription record and every preference at any time via <em>Settings → Delete all data</em>.
+        That action is final and immediate — there is no cloud copy to retrieve afterward.
+      </p>
+      <p>
+        For the small surfaces where third-party data flows do happen (RevenueCat purchase validation;
+        optional opt-in analytics): if you want a copy or deletion of any data those services hold
+        about you, email us at the address below and we'll process the request within 30 days.
+      </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        If we change this policy meaningfully, we'll update the date at the top and announce the change
+        on our marketing site. The current version is always at
+        <a href="https://jorgelameiras.github.io/subkiller-web/privacy.html">jorgelameiras.github.io/subkiller-web/privacy.html</a>.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:jorgelameiras207@gmail.com?subject=SubKiller%20privacy">jorgelameiras207@gmail.com</a>.
+        We try to reply within 48 hours.
+      </p>
+
+      <footer>SubKiller · Made in Florida · © 2026 Jorge Lameiras</footer>
+    </main>
+  </body>
+</html>
