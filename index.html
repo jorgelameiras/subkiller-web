@@ -18,9 +18,9 @@
           <span>SubKiller</span>
         </a>
         <!-- TODO: Replace this CSS badge with Apple's official App Store badge asset before public launch. -->
-        <a class="store-badge" href="#download" aria-label="Download on the App Store">
-          <span>Download on the</span>
-          <strong>App Store</strong>
+        <a class="store-badge" href="#waitlist" aria-label="Join the SubKiller launch waitlist">
+          <span>Join the</span>
+          <strong>Launch Waitlist</strong>
         </a>
       </nav>
 
@@ -30,7 +30,7 @@
           <h1>Stop paying to <s>track</s>. <span>We cancel them.</span></h1>
           <p class="lede">Tracking is a checkbox. Cancelling is a fight. SubKiller is built for the fight.</p>
           <div class="hero-actions">
-            <a class="primary-cta" href="#download">Get SubKiller</a>
+            <a class="primary-cta" href="#waitlist">Join the TestFlight waitlist</a>
             <a class="secondary-cta" href="#compare">Compare privacy</a>
           </div>
           <div class="pledge-strip">No bank login. No cloud. No backend that could leak.</div>
@@ -239,13 +239,63 @@
         </details>
       </section>
 
-      <section class="closing" id="download">
-        <h2>Stop paying $9 a month to know you're paying $84 a month.</h2>
-        <a class="store-badge large" href="#" aria-label="Download on the App Store">
-          <span>Download on the</span>
-          <strong>App Store</strong>
-        </a>
+      <section class="closing" id="waitlist">
+        <p class="eyebrow">Private launch waitlist</p>
+        <h2>Find subscriptions wasting your money.</h2>
+        <p class="waitlist-lede">Join the first group to test SubKiller and tell us whether the one-time $4.99 Pro unlock earns its price.</p>
+        <form class="waitlist-form" id="waitlist-form">
+          <label>
+            Email
+            <input id="waitlist-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+          </label>
+          <label>
+            What is your biggest subscription problem?
+            <select id="waitlist-problem" name="problem" required>
+              <option value="" selected disabled>Choose one</option>
+              <option>Forgotten subscriptions</option>
+              <option>Hard-to-find cancellation pages</option>
+              <option>Trials converting to paid plans</option>
+              <option>Not knowing lifetime spend</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <fieldset>
+            <legend>Would you pay $4.99 once if SubKiller saves you money?</legend>
+            <label class="radio-row"><input type="radio" name="wtp" value="Yes" required /> Yes</label>
+            <label class="radio-row"><input type="radio" name="wtp" value="Maybe" /> Maybe</label>
+            <label class="radio-row"><input type="radio" name="wtp" value="No" /> No</label>
+          </fieldset>
+          <button class="primary-cta waitlist-submit" type="submit">Join waitlist &amp; send feedback</button>
+          <p class="waitlist-note">This opens a prefilled email so you can review exactly what you send. No tracking form or mailing-list backend.</p>
+          <p class="waitlist-status" id="waitlist-status" role="status" aria-live="polite"></p>
+        </form>
       </section>
     </main>
+    <script>
+      (() => {
+        const form = document.getElementById("waitlist-form");
+        const params = new URLSearchParams(window.location.search);
+        const source = params.get("utm_source") || params.get("source") || "landing";
+        const campaign = params.get("utm_campaign") || "apple-review-launch";
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          const email = document.getElementById("waitlist-email").value.trim();
+          const problem = document.getElementById("waitlist-problem").value;
+          const wtp = new FormData(form).get("wtp");
+          const subject = `SubKiller waitlist [source=${source}] [campaign=${campaign}]`;
+          const body = [
+            "Please add me to the SubKiller TestFlight/launch waitlist.",
+            "",
+            `Email: ${email}`,
+            `Biggest subscription problem: ${problem}`,
+            `Would pay $4.99 once: ${wtp}`,
+            `Source: ${source}`,
+            `Campaign: ${campaign}`,
+          ].join("\n");
+          document.getElementById("waitlist-status").textContent = "Opening your email app with tagged feedback…";
+          window.location.href = `mailto:jorgelameiras207@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
+      })();
+    </script>
   </body>
 </html>
